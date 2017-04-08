@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170408115622) do
+ActiveRecord::Schema.define(version: 20170408161144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pin_codes", force: :cascade do |t|
+    t.string "pincode"
+    t.string "deviceToken"
+  end
+
+  create_table "pin_tables", force: :cascade do |t|
+    t.string "pin"
+    t.string "deviceToken"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

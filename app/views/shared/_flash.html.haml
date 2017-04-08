@@ -1,0 +1,6 @@
+#js-flash
+#flash.clearfix
+  - flash.each do |msg_type, message|
+    %div{:class => "alert #{bootstrap_class_for(msg_type)} fade in"}
+      %button.close{"data-dismiss" => "alert"} ×
+      = message.is_a?(Array) ? raw(message.join('<br>')) : message

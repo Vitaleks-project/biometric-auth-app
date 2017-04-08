@@ -1,0 +1,12 @@
+.row
+  .container
+    .jumbotron
+      %h2 Enter your pin code from device
+      %div{:style => "width: 500px;"}
+        = form_for @pincode do |f|
+          .form-group
+            %label{:for => "exampleInputEmail1"} Pin code
+            = f.text_field :pincode, autofocus: true, class: "form-control", placeholder: "Pin code"
+          .actions
+            = f.submit "Submit", class: "btn btn-default"
+            = link_to "Back", root_path, class: "btn btn-default"

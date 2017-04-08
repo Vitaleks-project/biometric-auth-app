@@ -15,3 +15,23 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+// setTimeout(function () {
+//     $.ajax({
+//       url: 'http://192.168.2.135:3000/users/sign_in',
+//       type: 'POST',
+//       data: {
+//         deviceToken: "apple"
+//       },
+//       xhrFields: {
+//         withCredentials: true
+//       },
+//       success: function (data) {
+//         console.log(data);
+//       },
+//       error: function (data) {
+//         console.log(data);
+//       }
+//
+//     })
+// }, 2000);
