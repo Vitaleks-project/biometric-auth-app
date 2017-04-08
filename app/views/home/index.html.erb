@@ -1,1 +1,12 @@
-<h1>Home page</h1>
+<div class="jumbotron">
+  <h1>Welcome to Babich application production</h1>
+  <p class="center">
+    <%- if current_user %>
+        Hello, <%= current_user.email %>
+        <br/>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %>
+    <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </p>
+</div>
