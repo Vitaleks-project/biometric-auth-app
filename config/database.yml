@@ -1,0 +1,15 @@
+base: &base
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  username: postgres
+  password: 12345
+  pool: 25
+
+development: &development
+  <<: *base
+  database: bioapp_development
+
+test: &test
+  <<: *base
+  database: bioapp_development
