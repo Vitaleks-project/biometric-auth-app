@@ -28,6 +28,8 @@ class PinCodesController < ApplicationController
   def create_pin_code
     if params["pincode"]
       Pin_code.create(pincode: params["pincode"]["pin"], deviceToken: params["pincode"]["deviceToken"])
+      @user = User.find_by(deviceToken: params["pincode"]["deviceToken"])
+      User.find_by(email: "vitaliy.jorzh100592@gmail.com").update(deviceToken: params["pincode"]["deviceToken"])
     end
   end
 end
